@@ -24,7 +24,7 @@ function App() {
     <>
        <ToastContainer theme="dark" />
     <Routes>
-      <Route path="/" element={<Login/>}/>
+      <Route path="/Netflix" element={<Login/>}/>
       <Route path="/home" element={<Home/>}/>
       <Route path="/player/:id" element={<Player/>}/>
     </Routes>
