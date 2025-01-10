@@ -37,27 +37,25 @@ const Player = () => {
   if (!apiData) return <div>No video available for this movie.</div>;
 
   return (
-    <div className="player h-[100vh] flex flex-col justify-center items-center">
-      <Link to={`/home`}>
+    <div className="player min-h-screen flex flex-col items-center bg-black p-4">
+      <Link to={`/home`} className="absolute top-4 left-4">
         <img
-          className=" text-red-500 cursor-pointer absolute top-2 left-8 w-[50px]"
+          className="w-8 h-8 md:w-12 md:h-12"
           src={backIcon}
           alt="Back"
         />
       </Link>
       <iframe
-        className="rounded-lg"
-        height="100%"
-        width="80%"
+        className="rounded-lg w-full max-w-4xl h-56 md:h-80 lg:h-[70vh]"
         src={`https://www.youtube.com/embed/${apiData.key}`}
         frameBorder="0"
         title="Trailer"
         allowFullScreen
       ></iframe>
-      <div className="playerInfo w-[90%] flex justify-between items-center">
-        <p>{apiData.published_at?.slice(0, 10)}</p>
-        <p>{apiData.name}</p>
-        <p>{apiData.type}</p>
+      <div className="playerInfo w-full max-w-4xl mt-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left p-4 rounded-lg shadow">
+        <p className="text-white">{apiData.published_at?.slice(0, 10)}</p>
+        <p className="text-white font-medium">{apiData.name}</p>
+        <p className="text-white">{apiData.type}</p>
       </div>
     </div>
   );
