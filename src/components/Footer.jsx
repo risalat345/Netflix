@@ -26,7 +26,7 @@ const Footer = () => {
   <li className='w-1/2 sm:w-3/12 break-words'>Corporate Information</li>
   <li className='w-1/2 sm:w-3/12 break-words'>Netflix Originals</li>
 </ul>
-
+<h1 className='text-center w-full bg-black text-red-600 font-mono'>Made By Ashraf Uddin</h1>
     </div>
   )
 }
